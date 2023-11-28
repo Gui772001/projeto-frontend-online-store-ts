@@ -10,5 +10,13 @@ export interface CategoryListProps {
 }
 
 export interface ProductListProps {
-  productList: any[];
+  productList: Product[];
+  onAddToCart: (productId: string) => void;
 }
+
+export type Product = {
+  id: string;
+  title: string;
+  image: string;
+  price: number;
+};
