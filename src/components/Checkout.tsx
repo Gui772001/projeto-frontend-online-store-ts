@@ -175,7 +175,7 @@ function Checkout() {
           {validateForm === false ? (
             <p data-testid="error-msg">{mensagem1}</p>
           ) : (
-            {}
+            <p />
           )}
         </div>
       ) : (
