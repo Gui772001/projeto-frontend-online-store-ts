@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 function Checkout() {
   const storedCart = localStorage.getItem('cart');
-  const [cartItems, setCartItems] = useState(storedCart ? JSON.parse(storedCart) : []);
+  const [cartItems] = useState(storedCart ? JSON.parse(storedCart) : []);
   localStorage.setItem('cart', JSON.stringify(cartItems));
   const [formData, setFormData] = useState({
     Nome: '',
@@ -175,7 +175,7 @@ function Checkout() {
           {validateForm === false ? (
             <p data-testid="error-msg">{mensagem1}</p>
           ) : (
-            <h1 />
+            {}
           )}
         </div>
       ) : (
